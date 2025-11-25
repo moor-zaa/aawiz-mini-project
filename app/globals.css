@@ -1,26 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 @import "tailwindcss";
+@import "material-symbols";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #eae9e3;
+  --foreground: #587665;
+  --primary: #587665;
+  --primary-foreground: #eae9e3;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  --background: linear-gradient(135deg, #eae9e3, #818d86) !important;
+  --foreground: linear-gradient(135deg, #587665, #3a4f46) !important;
+  --color: black;
+}
+
+html.dark {
+  --foreground: linear-gradient(135deg, #eae9e3, #818d86) !important;
+  --background: linear-gradient(135deg, #42564a, #232f29) !important;
+  --color: #c1d2c8;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--color);
   font-family: Arial, Helvetica, sans-serif;
 }
